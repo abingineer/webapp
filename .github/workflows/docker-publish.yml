@@ -20,7 +20,7 @@ jobs:
         name: Build & push Docker image
         with:
           image: aboubacar/webapp
-          tags: ${{steps.build-number.outputs.BUILD_NUMBER}},latest
+          tags: latest, ${{steps.build-number.outputs.BUILD_NUMBER}}
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
