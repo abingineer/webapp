@@ -12,6 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: Check out code
+        
       - name: Set Image Build number
         id: build-number
         run: echo "BUILD_NUMBER=$(date '+%d.%m.%Y.%H.%M.%S')" >> $GITHUB_OUTPUT
